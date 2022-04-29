@@ -130,7 +130,7 @@ void ArenaSpectatorNPC::GetMatchInformation(Battleground* arena, Player* target,
         case ARENA_TYPE_3v3:
             slot = 1;
             break;
-        case ARENA_TYPE_5v5:
+        case ARENA_TYPE_1v1:
             slot = 2;
             break;
         default:
@@ -197,7 +197,7 @@ void ArenaSpectatorNPC::ShowPage(Player* player, uint16 page, uint32 IsTop) {
             }
             if (TypeTwo >= page * GamesOnPage)
                 AddGossipItemFor(player, GOSSIP_ICON_BATTLE, GetGamesStringData(arena, mmr, mmrTwo, firstTeamName, secondTeamName), GOSSIP_SENDER_MAIN, NPC_SPECTATOR_ACTION_SELECTED_PLAYER + GetFirstPlayerGuid(arena).GetCounter());
-        } else if (IsTop == 5 && arena->GetArenaType() == ARENA_TYPE_5v5) {
+        } else if (IsTop == 5 && arena->GetArenaType() == ARENA_TYPE_1v1) {
             TypeThree++;
             if (TypeThree > (page + 1) * GamesOnPage) {
                 hasNextPage = true;

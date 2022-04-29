@@ -35,6 +35,8 @@ enum NpcSpectatorActions {
     NPC_SPECTATOR_ACTION_SELECTED_PLAYER = 4000
 };
 
+constexpr uint32 ARENA_TYPE_1v1 = 1;
+
 class ArenaSpectatorNPC
 {
 public:
